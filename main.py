@@ -82,3 +82,10 @@ class MainWindow(QMainWindow):
                 pixmap = cvimg_to_qpixmap(img_with_boxes).scaledToWidth(
                     700, Qt.SmoothTransformation)
                 self.image_label.setPixmap(pixmap)
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec())
+
